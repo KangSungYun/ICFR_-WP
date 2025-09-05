@@ -6,11 +6,12 @@ flowchart LR
   %% ─── Sales / AR ───
   start([Start · 월말 마감 트리거]) --> ar_close[AR 보조원장 마감 및 판매반품/조정 반영]
 
-  %% ─── Credit Risk / FP&A ───
+
+%% ─── Credit Risk / FP&A ───
   ar_close --> aging[AR 에이징 리포트 추출·검토]
   aging --> segment[[세그먼트 구분 (고객군/지역/리스크)]]
-
   segment --> params[/ECL 파라미터 업데이트 (PD·LGD, 매크로)/]
+
 
   %% ─── Accounting ───
   params --> calc["ECL 계산 실행 (무상각·평균손실율)"]
