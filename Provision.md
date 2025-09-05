@@ -8,7 +8,7 @@ flowchart LR
 
   %% ─── Credit Risk / FP&A ───
   ar_close --> aging[AR 에이징 리포트 추출·검토]
-  aging --> segment[[세그먼트 구분 (고객군/지역/리스크)]]
+  aging --> segment[세그먼트 구분 (고객군/지역/리스크)]
   segment --> params[/ECL 파라미터 업데이트 (PD·LGD, 매크로)/]
 
   %% ─── Accounting ───
